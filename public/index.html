@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chat app</title>
+   
+  </head>
+  <body>
+    <style>
+      #chatSection.scroll{ 
+                margin:4px, 4px; 
+                padding:4px; 
+                width: 500px; 
+                height: 110px; 
+                overflow-x: hidden; 
+                overflow-y: auto; 
+                text-align:justify; 
+            } 
+        #container {
+          width: 700px;
+          margin: 0 auto;
+        }
+        .chat-input {
+          width: 300px;
+          height: 35px;
+          border: solid 1px #444;
+        }
+        .chat-submit {
+          width: 50px;
+          height: 35px;
+          border: solid 1px #444;
+        }
+        .chat-window {
+          height: 300px;
+          width: 400px;
+        }
+        #chatSection {
+          float: left;
+          border: 1px grey solid;
+          border-radius: 10px;
+          padding: 10px;
+          margin:5px; 
+          padding:5px; 
+          background-color: green; 
+          width: 500px; 
+          height: 300px; 
+          overflow: auto; 
+          text-align:justify;
+          scroll-behavior: smooth;
+        }
+        .chat-form{
+          position:absolute;
+          top: 350px;
+          
+        }
+        h1{
+          padding-left: 192px;
+        }
+        span{
+          background:coral;
+          padding: 10px
+                 }
+      </style>
+    <div id="container">
+      <h1>
+        chatty
+      </h1>
+      <div id="chatSection">
+        <div class="chat-window"></div>
+        <form class="chat-form">
+          <label class="chat-label">
+            <span>
+            Enter a message:
+            </span>
+            <input type="text" class="chat-input" />
+          </label>
+          <input type="submit" class="chat-submit" value="enter" />
+        </form>
+      </div>
+
+    </div>
+
+
+    <script src="socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
